@@ -116,8 +116,9 @@ playerTwoBoard = [
 print "Player 1 select your first slot number for your ship:"
 choosePosition(1, playerOneBoard)
 print "Okay player one! here's how your board looks!"
-print "Player 1 select your first slot number for your ship:"
 drawBoard(playerOneBoard)
+print "Player 2 select your first slot number for your ship:"
+
 choosePosition(2, playerTwoBoard)
 print "Okay player two! here's how your board looks!"
 drawBoard(playerTwoBoard)
