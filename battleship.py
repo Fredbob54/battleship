@@ -92,9 +92,9 @@ def chooseAttack(opponents_board):
     Once the player has successfully chosen the slot to attack,
     this function should 'return' the checkIfHitOrMiss result
     """
-#while
-answer = raw_input("choose a number between 0 through 8 to attack")
-result = checkIfHitOrMiss(guess, opponents_board)
+    #while
+    answer = raw_input("choose a number between 0 through 8 to attack")
+    result = checkIfHitOrMiss(guess, opponents_board)
 
 # the game begins here:
 playerOneBoard = [
@@ -120,17 +120,18 @@ game_not_won = True
 player_n_turn = 1
 
 while game_not_won = True
-
-    if player_n_turn = 1
+    # need to give instructions to the user here!
+    if player_n_turn = 1 # hmm....
         drawBoardWithoutShip(playerTwoBoard)
         result = chooseAttack(playerTwoBoard)
-    if player_n_turn = 2
+    if player_n_turn = 2 # hmm....
         drawBoardWithoutShip(playerOneBoard)
         result = chooseAttack(playerOneBoard)
-    if game_not_won = False
+    if game_not_won = False # should check result, not game_not_won!
         print "player x won"
+         # need to do something here...
     else:
-        if player_n_turn = = 1
+        if player_n_turn = = 1 # hmm....
             player_n_turn = 2
         else:
             player_n_turn = 1
