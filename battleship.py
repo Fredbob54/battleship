@@ -1,7 +1,7 @@
 # this is james and abigail's battleship project
 
 #import time time.sleep(secs)
-import time 
+import time
 def drawBoard (board):
     print('   |   |')
     print(' ' + board[0] + ' | ' + board[1] + ' | ' + board[2])
