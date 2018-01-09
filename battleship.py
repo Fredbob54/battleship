@@ -128,6 +128,7 @@ game_not_won = True
 player_n_turn = 1
 
 while game_not_won == True:
+    print "\n \n \n \n \n \n \n \n \n \n \n"
     print "Player %s its your turn now!" %player_n_turn
     if player_n_turn == 1:
         drawBoardWithoutShip(playerTwoBoard)
