@@ -121,16 +121,16 @@ player_n_turn = 1
 
 while game_not_won = True
 
-    if player 1's turn
+    if player_n_turn = 1
         drawBoardWithoutShip(playerTwoBoard)
         result = chooseAttack(playerTwoBoard)
-    if player 2's turn
+    if player_n_turn = 2
         drawBoardWithoutShip(playerOneBoard)
         result = chooseAttack(playerOneBoard)
     if game_not_won = False
         print "player x won"
     else:
-        if playerm 1's turn:
+        if player_n_turn = = 1
             player_n_turn = 2
         else:
             player_n_turn = 1
