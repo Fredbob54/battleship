@@ -40,16 +40,16 @@ def choosePosition(player_n, board):
     """
     drawBoard(board)
     slot_1 = int(raw_input("Slot 1 Position Number: > "))
-    board[slot_1] = "X"
+    board[slot_1] = "S"
     print "Player %r: select your second slot number for your ship:" % player_n
     drawBoard(board)
     slot_2 = int(raw_input("Slot 2 Position Number: > "))
     while (slot_1 + 3 != slot_2 and slot_1 - 3 != slot_2 and slot_1 + 1 != slot_2 and slot_1 - 1 != slot_2):
         print "Invalid choice! Try again!"
         slot_2 = int(raw_input("Slot 2 Position Number: > "))
-    board[slot_2] = "X"
+    board[slot_2] = "S"
     for index, each in enumerate(board):
-        if(each != "X"):
+        if(each != "S"):
             board[index] = " "
         else:
             board[index] = "S"
