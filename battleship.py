@@ -117,6 +117,7 @@ print "Player 1 select your first slot number for your ship:"
 choosePosition(1, playerOneBoard)
 print "Okay player one! here's how your board looks!"
 drawBoard(playerOneBoard)
+time.sleep(7)
 print "Player 2 select your first slot number for your ship:"
 
 choosePosition(2, playerTwoBoard)
