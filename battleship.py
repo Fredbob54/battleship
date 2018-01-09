@@ -65,10 +65,10 @@ def checkIfHitOrMiss(guess, opponents_board):
         print "Miss!"
         opponents_board[guess] = "M"
         return "miss"
-    if opponents_slot == "M" or opponents_slot == "H"
+    if opponents_slot == "M" or opponents_slot == "H":
         print "You've already guess this! Try again."
         return "guess again"
-    if opponents_slot == "S"
+    if opponents_slot == "S":
         print "You've hit the ship!"
         return "S"
         opponents_board[guess] = "H"
@@ -92,9 +92,14 @@ def chooseAttack(opponents_board):
     Once the player has successfully chosen the slot to attack,
     this function should 'return' the checkIfHitOrMiss result
     """
-    #while
-    answer = raw_input("choose a number between 0 through 8 to attack")
-    result = checkIfHitOrMiss(guess, opponents_board)
+    guess = int(raw_input("choose a space 0-8 to attack")) # convert this users answer to an integer using int()! also should be 0-8
+    CHORanswer = checkIfHitOrMiss(guess, opponents_board) # set this equal to something (similar to 'answer = raw_input()')
+    while CHORanswer == "guess again": # don't use the guess variable here, check the result of checkIfHitOrMiss
+        print """Oops! you've already guessed this space.
+        please choose an available spece to attqck"""
+        int(raw_input("choose a space 0-8 to attack")) # convert this users answer to an integer using int()! and save it into "guess" like you did on line 26
+        checkIfHitOrMiss(guess, opponents_board) # set this equal to something (similar to 'answer = raw_input()')
+    return guess
 
 # the game begins here:
 playerOneBoard = [
