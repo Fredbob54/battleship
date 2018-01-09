@@ -119,19 +119,19 @@ drawBoard(playerTwoBoard)
 game_not_won = True
 player_n_turn = 1
 
-while game_not_won = True
-    # need to give instructions to the user here!
-    if player_n_turn = 1 # hmm....
+while game_not_won == True:
+    print "Player %s its your turn now!" %player_n_turn
+    if player_n_turn == 1:
         drawBoardWithoutShip(playerTwoBoard)
         result = chooseAttack(playerTwoBoard)
-    if player_n_turn = 2 # hmm....
+    if player_n_turn == 2:
         drawBoardWithoutShip(playerOneBoard)
         result = chooseAttack(playerOneBoard)
-    if game_not_won = False # should check result, not game_not_won!
-        print "player x won"
-         # need to do something here...
+    if result == "sunk":
+        print "player %s won" %player_n_turn
+        game_not_won = False
     else:
-        if player_n_turn = = 1 # hmm....
+        if player_n_turn == 1:
             player_n_turn = 2
         else:
             player_n_turn = 1
