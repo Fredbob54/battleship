@@ -49,7 +49,7 @@ def choosePosition(player_n, board):
     drawBoard(board)
     print "Player %r: select your second slot number for your ship:" % player_n
     slot_2 = int(raw_input("Slot 2 Position Number: > "))
-    while ((slot_1 + 3 != slot_2 and slot_1 - 3 != slot_2 and slot_1 + 1 != slot_2 and slot_1 - 1 != slot_2) or (slot_2 < 0 or slot_2 > 8)):
+    while ((slot_1 + 3 != slot_2 and slot_1 - 3 != slot_2 and slot_1 + 1 != slot_2 and slot_1 - 1 != slot_2) or (slot_2 < 0 or slot_2 > 8) or (slot_2 == 2 and slot_1 == 3) or (slot_2 == 3 and slot_1 == 2) or (slot_2 == 5 and slot_1 == 6) or (slot_2 == 6 and slot_1 == 5)):
         print "Invalid choice! Try again!"
         slot_2 = int(raw_input("Slot 2 Position Number: > "))
     board[slot_2] = "S"
