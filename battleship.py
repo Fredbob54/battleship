@@ -104,7 +104,7 @@ def chooseAttack(opponents_board):
         please choose an available space to attack"""
         guess = int(raw_input("choose a space 0-8 to attack")) # convert this users answer to an integer using int()! and save it into "guess" like you did on line 26
         CHORanswer = checkIfHitOrMiss(guess, opponents_board) # set this equal to something (similar to 'answer = raw_input()')
-    return guess
+    return CHORanswer
 
 # the game begins here:
 playerOneBoard = [
