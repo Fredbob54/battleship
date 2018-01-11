@@ -1,7 +1,7 @@
 # this is james and abigail's battleship project
 
 #import time time.sleep(secs)
-import time 
+import time
 def drawBoard (board):
     print('   |   |')
     print(' ' + board[0] + ' | ' + board[1] + ' | ' + board[2])
@@ -99,7 +99,7 @@ def chooseAttack(opponents_board):
         print """Oops! you've already guessed this space.
         please choose an available spece to attqck"""
         int(raw_input("choose a space 0-8 to attack")) # convert this users answer to an integer using int()! and save it into "guess" like you did on line 26
-        checkIfHitOrMiss(guess, opponents_board) # set this equal to something (similar to 'answer = raw_input()')
+        CHORanswer = checkIfHitOrMiss(guess, opponents_board) # set this equal to something (similar to 'answer = raw_input()')
     return guess
 
 # the game begins here:
