@@ -97,8 +97,8 @@ def chooseAttack(opponents_board):
     CHORanswer = checkIfHitOrMiss(guess, opponents_board) # set this equal to something (similar to 'answer = raw_input()')
     while CHORanswer == "guess again": # don't use the guess variable here, check the result of checkIfHitOrMiss
         print """Oops! you've already guessed this space.
-        please choose an available spece to attqck"""
-        int(raw_input("choose a space 0-8 to attack")) # convert this users answer to an integer using int()! and save it into "guess" like you did on line 26
+        please choose an available space to attack"""
+        guess = int(raw_input("choose a space 0-8 to attack")) # convert this users answer to an integer using int()! and save it into "guess" like you did on line 26
         CHORanswer = checkIfHitOrMiss(guess, opponents_board) # set this equal to something (similar to 'answer = raw_input()')
     return guess
 
@@ -118,7 +118,7 @@ print "Player 1 select your first slot number for your ship:"
 choosePosition(1, playerOneBoard)
 print "Okay player one! here's how your board looks!"
 drawBoard(playerOneBoard)
-print "\n \n \n \n \n \n \n \n \n \n \n"
+print "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n "
 time.sleep(7)
 
 print "Player 2 select your first slot number for your ship:"
@@ -131,6 +131,8 @@ player_n_turn = 1
 
 while game_not_won == True:
     print "Player %s its your turn now!" %player_n_turn
+    print "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n "
+    time.sleep(5)
     if player_n_turn == 1:
         drawBoardWithoutShip(playerTwoBoard)
         result = chooseAttack(playerTwoBoard)
