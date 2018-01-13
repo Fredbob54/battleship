@@ -68,15 +68,18 @@ def checkIfHitOrMiss(guess, opponents_board):
     opponents_slot = opponents_board[guess]
     if opponents_slot == " ":
         print "Miss!"
+        time.sleep(3)
         opponents_board[guess] = "M"
         return "miss"
     if opponents_slot == "M" or opponents_slot == "H":
         print "You've already guess this! Try again."
+        time.sleep(3)
         return "guess again"
     if opponents_slot == "S":
         print "You've hit the ship!"
+        time.sleep(3)
         return "S"
-        opponents_board[guess] = "H"
+        opponents_slot = "H"
         for each_slot in opponents_board:
             if each_slot == "S":
                 print "its the opponents turn"
@@ -134,9 +137,9 @@ game_not_won = True
 player_n_turn = 1
 
 while game_not_won == True:
-    print "Player %s its your turn now!" %player_n_turn
     print "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n "
     time.sleep(5)
+    print "Player %s its your turn now!" %player_n_turn
     if player_n_turn == 1:
         drawBoardWithoutShip(playerTwoBoard)
         result = chooseAttack(playerTwoBoard)
