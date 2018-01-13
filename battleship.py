@@ -100,13 +100,13 @@ def chooseAttack(opponents_board):
     Once the player has successfully chosen the slot to attack,
     this function should 'return' the checkIfHitOrMiss result
     """
-    guess = int(raw_input("choose a space 0-8 to attack")) # convert this users answer to an integer using int()! also should be 0-8
-    CHORanswer = checkIfHitOrMiss(guess, opponents_board) # set this equal to something (similar to 'answer = raw_input()')
-    while CHORanswer == "guess again": # don't use the guess variable here, check the result of checkIfHitOrMiss
+    guess = int(raw_input("choose a space 0-8 to attack"))
+    CHORanswer = checkIfHitOrMiss(guess, opponents_board)
+    while CHORanswer == "guess again":
         print """Oops! you've already guessed this space.
         please choose an available space to attack"""
-        guess = int(raw_input("choose a space 0-8 to attack")) # convert this users answer to an integer using int()! and save it into "guess" like you did on line 26
-        CHORanswer = checkIfHitOrMiss(guess, opponents_board) # set this equal to something (similar to 'answer = raw_input()')
+        guess = int(raw_input("choose a space 0-8 to attack"))
+        CHORanswer = checkIfHitOrMiss(guess, opponents_board)
     return CHORanswer
 
 # the game begins here:
@@ -126,7 +126,7 @@ choosePosition(1, playerOneBoard)
 print "Okay player one! here's how your board looks!"
 drawBoard(playerOneBoard)
 print "\n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n "
-time.sleep(7)
+time.sleep(5)
 
 print "Player 2 select your first slot number for your ship:"
 
