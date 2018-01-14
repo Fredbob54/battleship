@@ -78,7 +78,7 @@ def checkIfHitOrMiss(guess, opponents_board):
     if opponents_slot == "S":
         print "You've hit the ship!"
         time.sleep(3)
-        
+
         opponents_board[guess] = "H"
         for each_slot in opponents_board:
             if each_slot == "S":
@@ -103,8 +103,7 @@ def chooseAttack(opponents_board):
     guess = int(raw_input("choose a space 0-8 to attack"))
     CHORanswer = checkIfHitOrMiss(guess, opponents_board)
     while CHORanswer == "guess again":
-        print """Oops! you've already guessed this space.
-        please choose an available space to attack"""
+        print """please choose an available space to attack"""
         guess = int(raw_input("choose a space 0-8 to attack"))
         CHORanswer = checkIfHitOrMiss(guess, opponents_board)
     return CHORanswer
