@@ -78,7 +78,7 @@ def checkIfHitOrMiss(guess, opponents_board):
     if opponents_slot == "S":
         print "You've hit the ship!"
         time.sleep(3)
-        return "S"
+        
         opponents_board[guess] = "H"
         for each_slot in opponents_board:
             if each_slot == "S":
